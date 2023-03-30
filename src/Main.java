@@ -14,19 +14,17 @@ public class Main {
         float floatC = in.nextFloat();
         float floatX1;
         float floatX2;
-        float floatD= (float) (pow(floatB,2) - 4.0f * floatA * floatC);
+        float floatD= (float) (pow(floatB,2) - 4 * floatA * floatC);
         if (floatD < 0)
             System.out.println("Корней нет");
         else if (floatD == 0) {
             floatX1 = -floatB / (floatA * 2);
-            System.out.println("Один корень:");
-            System.out.println(floatX1);
+            System.out.println("Один корень:" + floatX1);
         }
         else if (floatD > 0) {
-            floatX1 = (float) ((-floatB + sqrt(floatD)) / (floatA * 2.0f));
-            floatX2 = (float) ((-floatB - sqrt(floatD)) / (floatA * 2.0f));
-            System.out.println("Два корня:");
-            System.out.println(floatX1);
+            floatX1 = (float) ((-floatB + sqrt(floatD)) / (floatA * 2));
+            floatX2 = (float) ((-floatB - sqrt(floatD)) / (floatA * 2));
+            System.out.println("Два корня:\n" + floatX1);
             System.out.println(floatX2);
         }
 
@@ -55,7 +53,7 @@ public class Main {
         else if (floatZd3x == 0)
             System.out.println(0);
         else if (floatZd3x < 0)
-        System.out.println(2 * abs(floatZd3x) - 1);
+            System.out.println(2 * abs(floatZd3x) - 1);
 
         /* 4) Создать меню выбора цвета (минимум 8 цветов).
         В зависимости от выбора вывести RGB координаты.*/
@@ -106,6 +104,7 @@ public class Main {
 
         int intDollar = in.nextInt();
         if (intDollar / 1000 != 0){
+            if (intDollar / 1000 == 9);
 
         }
 
@@ -143,18 +142,16 @@ public class Main {
             else if ((floatZd7a == floatZd7b) &&
                     (floatZd7b == floatZd7c))
                 System.out.println("Этот треугольник разносторонний");
-            else System.out.println("Этот треугольник равнобедренный");
+            else
+                System.out.println("Этот треугольник равнобедренный");
         }
-        else System.out.println("Этот треугольник не существует");
+        else
+            System.out.println("Этот треугольник не существует");
 
         /*8)  Определить високосный год или нет вводит пользователь.*/
 
         int intGod = in.nextInt();
-        if ((intGod % 100 == 0) &&
-                (intGod % 400 == 0))
-            System.out.println("Год высокосный");
-        else if ((intGod % 4 == 0) &&
-                (intGod % 100 != 0))
+        if (((intGod % 100 == 0) && (intGod % 400 == 0)) || (intGod % 4 == 0) &&  (intGod % 100 != 0))
             System.out.println("Год высокосный");
         else
             System.out.println("Год не высокосный");
@@ -178,8 +175,7 @@ public class Main {
         else if (((floatZd10b > floatZd10a) && (floatZd10b < floatZd10c)) ||
                 ((floatZd10b < floatZd10a) && (floatZd10b > floatZd10c)))
             System.out.println(floatZd10b);
-        else if (((floatZd10c > floatZd10b) && (floatZd10c < floatZd10a)) ||
-                ((floatZd10c < floatZd10b) && (floatZd10c > floatZd10a)))
+        else
             System.out.println(floatZd10c);
 
         /*11) Ракета запускается с Земли со скоростью V(км.час) в направлении движения Земли по орбите вокруг Солнца.
@@ -194,17 +190,17 @@ public class Main {
             System.out.println("Ракета станет спутником Земли");
         else if ((floatV > 11.2) && (floatV < 16.4))
             System.out.println("Ракета станет спутником Солнца");
-        else if (floatV > 16.4)
+        else
             System.out.println("Ракета покинет солнечную систему");
 
         /*12) Определелить количество знаков в натуральном числе от 0 до 1000, не прибегая к строковым переменным.*/
 
         int intNat = in.nextInt();
-        if (intNat % 1000 == 0)
+        if (intNat == 1000)
             System.out.println("Четыре знака");
-        else if (intNat / 100 > 0)
+        else if ((intNat > 100) && (intNat < 1000))
             System.out.println("Три знака");
-        else if (intNat / 10 > 0)
+        else if ((intNat > 10) && (intNat < 100))
             System.out.println("Два знака");
         else if (intNat >= 0)
             System.out.println("Один знак");
