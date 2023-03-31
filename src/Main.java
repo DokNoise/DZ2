@@ -102,11 +102,108 @@ public class Main {
         2149 – две тысячи сто сорок девять долларов,
         15 – пятнадцать долларов, 3 – три доллара.*/
 
+        System.out.println("Введите число от 1 до 9999");
         int intDollar = in.nextInt();
-        if (intDollar / 1000 != 0){
-            if (intDollar / 1000 == 9);
+            if ((intDollar <=0) || (intDollar > 9999))
+                System.out.println("Вы ввели неправильное число");
+            else {
+                if (intDollar / 1000 != 0) {
+                    if (intDollar / 1000 == 1)
+                        System.out.print("одна тысяча ");
+                    else if (intDollar / 1000 == 2)
+                        System.out.print("две тысячи ");
+                    else if (intDollar / 1000 == 3)
+                        System.out.print("три тысячи ");
+                    else if (intDollar / 1000 == 4)
+                        System.out.print("четыре тысячи ");
+                    else if (intDollar / 1000 == 5)
+                        System.out.print("пять тысяч ");
+                    else if (intDollar / 1000 == 6)
+                        System.out.print("шесть тысяч ");
+                    else if (intDollar / 1000 == 7)
+                        System.out.print("семь тысяч ");
+                    else if (intDollar / 1000 == 8)
+                        System.out.print("восемь тысяч ");
+                    else if (intDollar / 1000 == 9)
+                        System.out.print("девять тысяч ");
+                } if ((intDollar / 100) % 10 == 1)
+                    System.out.print("cто ");
+                else if ((intDollar / 100) % 10 == 2)
+                    System.out.print("двести ");
+                else if ((intDollar / 100) % 10 == 3)
+                    System.out.print("триста ");
+                else if ((intDollar / 100) % 10 == 4)
+                    System.out.print("четыреста ");
+                else if ((intDollar / 100) % 10 == 5)
+                    System.out.print("пятьсот ");
+                else if ((intDollar / 100) % 10 == 6)
+                    System.out.print("шестьсот ");
+                else if ((intDollar / 100) % 10 == 7)
+                    System.out.print("семьсот ");
+                else if ((intDollar / 100) % 10 == 8)
+                    System.out.print("восемьсот ");
+                else if ((intDollar / 100) % 10 == 9)
+                    System.out.print("девятьсот ");
+                if (intDollar / 10 % 10 == 1) {
+                    if (intDollar % 10 == 0)
+                        System.out.print("десять долларов");
+                    else if (intDollar % 10 == 1)
+                        System.out.print("одиннадцать долларов");
+                    else if (intDollar % 10 == 2)
+                        System.out.print("двенадцать долларов");
+                    else if (intDollar % 10 == 3)
+                        System.out.print("тринадцать долларов");
+                    else if (intDollar % 10 == 4)
+                        System.out.print("четырнадцать долларов");
+                    else if (intDollar % 10 == 5)
+                        System.out.print("пятнадцать долларов");
+                    else if (intDollar % 10 == 6)
+                        System.out.print("шестнадцать долларов");
+                    else if (intDollar % 10 == 7)
+                        System.out.print("семнадцать долларов");
+                    else if (intDollar % 10 == 8)
+                        System.out.print("восемнадцать долларов");
+                    else System.out.print("девятнадцать долларов");
+                } if (intDollar / 10 % 10 == 2)
+                    System.out.print("двадцать ");
+                else if (intDollar / 10 % 10 == 3)
+                    System.out.print("тридцать ");
+                else if (intDollar / 10 % 10 == 4)
+                    System.out.print("сорок ");
+                else if (intDollar / 10 % 10 == 5)
+                    System.out.print("пятьдесят ");
+                else if (intDollar / 10 % 10 == 6)
+                    System.out.print("шестьдесят ");
+                else if (intDollar / 10 % 10 == 7)
+                    System.out.print("семьдесят ");
+                else if (intDollar / 10 % 10 == 8)
+                    System.out.print("восемьдесят ");
+                else if (intDollar / 10 % 10 == 9)
+                    System.out.print("девяноста ");
+                if (intDollar / 10 % 10 != 1) {
+                    if (intDollar % 10 == 1)
+                        System.out.print("один доллар");
+                    else if (intDollar % 10 == 2)
+                        System.out.print("два доллара");
+                    else if (intDollar % 10 == 3)
+                        System.out.print("три доллара");
+                    else if (intDollar % 10 == 4)
+                        System.out.print("четыре доллара");
+                    else if (intDollar % 10 == 5)
+                        System.out.print("пять долларов");
+                    else if (intDollar % 10 == 6)
+                        System.out.print("шесть долларов");
+                    else if (intDollar % 10 == 7)
+                        System.out.print("семь долларов");
+                    else if (intDollar % 10 == 8)
+                        System.out.print("восемь долларов");
+                    else if (intDollar % 10 == 9)
+                        System.out.print("девять долларов");
+                }
+            }
 
-        }
+
+
 
         /*6)  Вводятся координаты (x;y) точки и радиус круга (r).
                 Определить принадлежит ли данная точка кругу,
@@ -252,15 +349,15 @@ public class Main {
         }
         if ((P1 > P2) && (P1 > P3)) {
             intPobI += 1;
-            System.out.println("Иванов выиграл во третьем туре");
+            System.out.println("Иванов выиграл в третьем туре");
         }
         else if ((P2 > P1) && (P2 > P3)) {
             intPobP += 1;
-            System.out.println("Петров выиграл во третьем туре");
+            System.out.println("Петров выиграл в третьем туре");
         }
         else if ((P3 > P1) && (P3 > P2)) {
             intPobS += 1;
-            System.out.println("Сидоров выиграл во третьем туре");
+            System.out.println("Сидоров выиграл в третьем туре");
         }
         if ((intPobI > intPobP) && (intPobI > intPobS)) {
             System.out.println("Иванов выиграл в Конкурсе");
@@ -279,15 +376,15 @@ public class Main {
                 System.out.println("Иванов выиграл в Конкурсе");
                 System.out.println("Баллы Иванова:" + intBalI);
             }
-        else if ((intBalP > intBalI) && (intBalP > intBalS)){
-                System.out.println("Иванов выиграл в Конкурсе");
-                System.out.println("Баллы Иванова:" + intBalP);
+            else if ((intBalP > intBalI) && (intBalP > intBalS)){
+                    System.out.println("Иванов выиграл в Конкурсе");
+                    System.out.println("Баллы Иванова:" + intBalP);
             }
-        else if ((intBalS > intBalI) && (intBalS > intBalP)){
+            else if ((intBalS > intBalI) && (intBalS > intBalP)){
                 System.out.println("Иванов выиграл в Конкурсе");
                 System.out.println("Баллы Иванова:" + intBalS);
             }
-        else {
+            else {
                 System.out.println("Никто не выиграл в Конкурсе");
                 System.out.println("Максимальный балл:" + intBalS);
             }
